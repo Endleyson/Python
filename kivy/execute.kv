@@ -1,0 +1,105 @@
+<Gerenciador>:
+
+	Login:
+		name: "Login"
+
+	Controle:
+		name: "Controle"
+'''
+<Login>:
+
+	FloatLayout:
+
+		Image:
+			source: "Mapser_Background.jpg"
+
+		TextInput:
+			id: nome
+			background_color: (0.5, 0.8, 0.3, 1)
+			hint_text_color: (0.6, 1, 0.7, 1)
+			size_hint: .6, .08
+			pos_hint: {"x": .2, "y": .57}
+			multiline: False 
+			font_size: 12
+			hint_text: "Digite aqui o username..."	
+
+		TextInput:
+			id: senha
+			password: True
+			background_color: (0.5, 0.8, 0.3, 1)
+			hint_text_color: (0.6, 1, 0.7, 1)
+			size_hint: .6, .08
+			pos_hint: {"x": .2, "y": .48}
+			multiline: False 
+			font_size: 12
+			hint_text: "Digite aqui o password..."
+
+		Button:
+			background_color: (0.5, 0.8, 0.3, 1)
+			color: (0.5, 0.8, 0.3, 1)
+			size_hint: .5, .06
+			pos_hint: {"x": .25, "y": .37}
+			font_size: 10
+			text: "CONECTAR"
+			on_release: root.analisar_dados(nome.text, senha.text)
+
+		Button:
+			background_color: (0.5, 0.8, 0.3, 1)
+			color: (0.5, 0.8, 0.3, 1)
+			size_hint: .4, .06
+			pos_hint: {"x": .3, "y": .30}
+			font_size: 10
+			text: "SAIR"
+			on_release: app.stop()
+
+		Label:
+			id: analisador
+			color: (0.5, 0.8, 0.3, 1)
+			size_hint: .4, .06
+			pos_hint: {"x": .3, "y": .43}
+			text: ""
+			font_size: 11
+
+'''
+<Controle>:
+
+	FloatLayout:
+
+		Image:
+			source: "Zamix_Hero.jpg"
+
+		Image:
+			source: "Zamix.png"
+			size_hint_x: None
+			width: 294
+			pos_hint: {"x": .02, "y": .4}
+
+		Label:
+			id: label
+			color: (0,0,0.3,1)
+			size_hint: .3, .05
+			pos_hint: {"x": .06, "y": .55}
+			text: "DISPOSITIVO"
+			font_size: 18
+
+		TextInput:
+			id: dispositivo
+			size_hint: .3, .05
+			pos_hint: {"x": .06, "y": .48}
+			multiline: False 
+			hint_text: "Digite aqui o dispositivo..."
+
+		TextInput:
+			id: imprime
+			size_hint: .5, .8
+			pos_hint: {"x": .45, "y": .1}
+			multiline: False
+			font_size: 15 
+
+		Button:
+			background_color: (0.1, 0.6, 1, 1)
+			size_hint: .2, .05
+			pos_hint: {"x": .11, "y": .40}
+			text: "Pesquisar"
+			on_release: root.ler(dispositivo.text)
+		

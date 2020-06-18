@@ -1,0 +1,169 @@
+<Gerenciador>:
+	Logar:
+		name: "Logar"
+
+	Create_Account:
+		name: "Create_Account"
+
+<Logar>:
+
+	FloatLayout:
+
+		Image:
+			source: "logo.jpg"
+			size_hint_y: None
+			size_hint_x: None
+			width: 1600
+			height: 900
+
+		Button:
+			background_color: (0.5, 1, 1, 1)
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .4}
+			text: "Connect"
+			on_release: 
+
+		Button:
+			background_color: (0.5, 1, 1, 1)
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .36, .06
+	        pos_hint: {"x": .32, "y": .33}
+			text: "Create Account"
+			on_release: app.root.current = "Create_Account" 
+
+		Button:
+			background_color: (0.5, 1, 1, 1)
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .15, .06
+	        pos_hint: {"x": .04, "y": .05}
+			text: "Exit"
+			on_release: label.text = "lol"
+
+		Label:
+			color: (0.4, 0.8, 0.9, 0.5)	
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .8}
+	        font_size: 40
+			text: "LOGIN"
+
+		Label:	
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .04, "y": .65}
+	        font_size: 20
+			text: "Account:"
+
+		Label:	
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .03, "y": .53}
+	        font_size: 20
+			text: "Password:"
+
+		Label:
+			id: label	
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .28}
+	        font_size: 13
+			text: ""
+
+		TextInput:
+			id: account
+			background_color: (0.3, 0.6, 0.6, 1)
+			hint_text_color: (0.4, 0.8, 0.9, 0.5)
+			multiline: False
+			size_hint: .4, .07
+			pos_hint: {"x": .3, "y": .65}
+			font_size: 25
+			hint_text: "Account..."
+			allow_copy: False
+
+		TextInput:
+			id: password
+			password: True
+			background_color: (0.3, 0.6, 0.6, 1)
+			hint_text_color: (0.4, 0.8, 0.9, 0.5)
+			multiline: False
+			size_hint: .4, .07
+			pos_hint: {"x": .3, "y": .53}
+			font_size: 25
+			hint_text: "Password..."
+			allow_copy: False
+
+<Create_Account>:
+
+	FloatLayout:
+
+		Image:
+			source: "logo.jpg"
+			size_hint_y: None
+			size_hint_x: None
+			width: 1600
+			height: 900
+
+		Button:
+			background_color: (0.5, 1, 1, 1)
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .28}
+			text: "Create"
+			on_release: app.root.current = "Analisador"	
+
+		Button:
+			background_color: (0.5, 1, 1, 1)
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .15, .06
+	        pos_hint: {"x": .04, "y": .05}
+			text: "Back"
+			on_release: app.root.current = "Logar"
+
+		Label:	
+			color: (0.4, 0.8, 0.9, 0.5)
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .8}
+	        font_size: 40
+			text: "Create Account"
+
+		Label:
+			id: label
+			color: (0.4, 0.8, 0.9, 0.5)	
+			size_hint: .4, .07
+	        pos_hint: {"x": .3, "y": .22}
+	        font_size: 13
+			text: ""
+
+		TextInput:
+			id: create_account
+			background_color: (0.3, 0.6, 0.6, 1)
+			hint_text_color: (0.4, 0.8, 0.9, 0.5)
+			multiline: False
+			size_hint: .4, .07
+			pos_hint: {"x": .3, "y": .65}
+			font_size: 25
+			hint_text: "Account..."
+			allow_copy: False
+
+		TextInput:
+			id: create_password
+			password: True
+			background_color: (0.3, 0.6, 0.6, 1)
+			hint_text_color: (0.4, 0.8, 0.9, 0.5)
+			multiline: False
+			size_hint: .4, .07
+			pos_hint: {"x": .3, "y": .53}
+			font_size: 25
+			hint_text: "Password..."
+			allow_copy: False
+
+		TextInput:
+			id: create_email
+			background_color: (0.3, 0.6, 0.6, 1)
+			hint_text_color: (0.4, 0.8, 0.9, 0.5)
+			multiline: False
+			size_hint: .4, .07
+			pos_hint: {"x": .3, "y": .41}
+			font_size: 25
+			hint_text: "E-Mail..."
+			allow_copy: False
